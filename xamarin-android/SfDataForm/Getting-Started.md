@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started | SfDataForm | Xamarin.Android | Syncfusion
-description: Getting started with SfDataForm.
+description: This section explains key features and getting started with SfDataForm for Xamarin.Android platform.
 platform: Xamarin.Android
 control: SfDataForm
 documentation: ug
@@ -17,7 +17,7 @@ The SfDataForm control helps editing the data fields of any data object. It can 
 * Custom editor: Supports loading the custom editors.
 * Validation: Built-in support to validate the data based on the [IDataErrorInfo](https://msdn.microsoft.com/en-us/library/system.componentmodel.idataerrorinfo.aspx), [INotifyDataErrorInfo](https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifydataerrorinfo.aspx), and data annotations. It also programmatically supports validation handling.
 
-# Getting started
+# Getting started with Xamarin.Android DataForm(SfDataForm)
 
 This section explains the quick overview to use the [SfDataForm](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.Android.DataForm.SfDataForm.html) for Xamarin.Android in your application.
 
@@ -494,3 +494,8 @@ SetContentView(linearLayout);
 
 By default, the data form enables editing of the data field. You can disable editing by setting the [IsReadOnly](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.Android.DataForm.SfDataForm.html#Syncfusion_Android_DataForm_SfDataForm_IsReadOnly) property of the data form. You can enable or disable editing for a particular data field by setting the [IsReadOnly](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.Android.DataForm.DataFormItem.html#Syncfusion_Android_DataForm_DataFormItem_IsReadOnly) property of [DataFormItem](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.Android.DataForm.DataFormItem.html) in the `AutoGeneratingDataFormItem` event. The data field editing behavior can also be defined by using [EditableAttribute](https://msdn.microsoft.com/en-us/library/system.componentmodel.dataannotations.editableattribute.aspx).
 
+## Additional Help Resources
+
+The [`Xamarin.Android SfDataForm`](https://www.syncfusion.com/kb/xamarin.android/dataform) Knowledge Base section contains responses to some of the most common questions that other customers have asked us before. So this will be a good place to search for topics that are not covered in the user guide.
+
+Similar to the [`Knowledge Base`](https://www.syncfusion.com/kb/xamarin.android/dataform), the [`forum`](https://www.syncfusion.com/forums/xamarin.Android) section also contains responses to questions that other customers have asked us in the past.

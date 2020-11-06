@@ -35,6 +35,22 @@ schedule.MonthViewSettings = monthViewSettings;
 >**NOTE**
 If appointments count are lesser than the AppointmentIndicatorCount value in the particular day, then according to number of appointments available, indicator will be displayed in the month cell.Maximum number of appointment indicators drawn in the month cell is 6.
 
+## Month appointment display mode
+
+You can handle the schedule month view appointment display by using the [AppointmentDisplayMode](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.Enums.AppointmentDisplayMode.html) property of [MonthViewSettings](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.MonthViewSettings.html). By default, the `AppointmentDisplayMode` is set as `Indicator.` Using the `AppointmentDisplayMode,` you can set the month view appointments display as follows.
+
+`Indicator`:  Appointment will be denoted as the circle.
+`Appointment`: Appointment subject will be displayed in the month cell.
+`None`: Appointment will not be displayed.
+
+{% tabs %}
+{% highlight c# %}
+MonthViewSettings monthViewSettings = new MonthViewSettings();
+monthViewSettings.AppointmentDisplayMode = AppointmentDisplayMode.Appointment;
+schedule.MonthViewSettings = monthViewSettings;
+{% endhighlight %}
+{% endtabs %}
+
 ## Month Inline View
 You can use [ShowAppointmentsInline](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.MonthViewSettings.html#Com_Syncfusion_Schedule_MonthViewSettings_ShowAppointmentsInline) bool property in [MonthViewSettings](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.MonthViewSettings.html) to enable / disable the month inline view, by setting `ShowAppointmentsInline` property as `true` you can view the Appointments in the specific date. 
 

@@ -274,7 +274,7 @@ The `RecurrenceRule` is a string value, that contains the details of the recurre
 | BYSETPOS | This property is used to store the index value of the week. For example, when you create the monthly appointment in second week of the month, the index value of the second week (2) is stored in BYSETPOS. Example: FREQ=MONTHLY;BYDAY=MO;BYSETPOS=2;UNTIL=8/11/2014 |
 
 ### Recurrence Pattern
-Recurrence pattern used in the control are in iCal standard. Schedule control supports all four types of [recurrence patterns](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.RecurrenceProperties.html).
+The recurrence patterns used in the control are in iCal standard. The schedule control supports all four types of [recurrence patterns](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.RecurrenceProperties.html). You can set the recurrence type using the [RecurrenceType](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.Enums.RecurrenceType.html) property of the RecurrenceRule.
 
 | RecurrenceType | RecurrenceProperties | Description                                                                                 |
 |----------------|----------------------|---------------------------------------------------------------------------------------------|
