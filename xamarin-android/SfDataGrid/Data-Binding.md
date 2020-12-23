@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Data Binding | SfDataGrid | Xamarin.Android | Syncfusion
-description: How to bind different sources to a SfDataGrid.
+description: Data Binding and different sources that can be bound to Xamarin.Android DataGrid. It supports data sources such as List, ObservableCollection and so on.
 platform: Xamarin.Android
 control: SfDataGrid
 documentation: UG
 ---
 
-# Data Binding
+# Data Binding in Xamarin.Android DataGrid (SfDataGrid)
 
 The SfDataGrid is bound to an external data source to display the data. It supports the data sources such as [List](https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx), [ObservableCollection](https://msdn.microsoft.com/en-us/library/ms668604(v=vs.110).aspx), and so on. The [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfDataGrid.SfDataGrid.html#Syncfusion_SfDataGrid_SfDataGrid_ItemsSource) property helps binding the SfDataGrid with the collection of objects.
 
@@ -71,6 +71,16 @@ dataGrid.ItemsSource = viewModel.DataTable;
 
 SetContentView(dataGrid);
 {% endhighlight %}
+
+Below are the limitations when binding DataTable as `ItemsSource` to SfDataGrid.
+
+* Custom sorting is not supported.
+* [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.Data.CollectionViewAdv.html#Syncfusion_Data_CollectionViewAdv_Filter) is not supported.
+* Advanced Filtering does not support Case Sensitive filtering.
+* [GridUnboundColumn.Expression](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfDataGrid.GridUnboundColumn.html#Syncfusion_SfDataGrid_GridUnboundColumn_Expression) is not supported. This can be achieved by using the [DataColumn](https://msdn.microsoft.com/en-us/library/System.Data.DataColumn) of DataTable by setting [DataColumn.Expression](https://msdn.microsoft.com/en-us/library/system.data.datacolumn.expression) property.
+* [SfDataGrid.LiveDataUpdateMode](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.Data.CollectionViewAdv.html#Syncfusion_Data_CollectionViewAdv_LiveDataUpdateMode) is not supported.
+* Filtering with [TimeSpan](https://msdn.microsoft.com/en-us/library/system.timespan) values is not supported.
+* Filtering with sub second components in `DateTime` values is not supported.
 
 ## Binding with dynamic data object
 
