@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Basic features in SfMaskedEdit for Xamarin.Android platform
-description: Learn how to customize the basic features of SfMaskedEdit
+title: Basic features in syncfusion MaskedEdit for Xamarin.Android platform
+description: Learn how to customize the value and setting prompt character and hint text for syncfusion masked edit control.
 platform: Xamarin.Android
 control: SfMaskedEdit
 documentation: ug 
@@ -9,7 +9,7 @@ keywords: mask, SfMaskedEdit, maskededit
 
 ---
 
-# Basic Features
+# Basic features in masked edit
 
 
 ## Setting Value
@@ -24,7 +24,7 @@ maskedEdit.Value =@"14/11/2014";
 {% endhighlight %}
 {% endtabs %}
 
-![](SfMaskedEditImages/BF_SetValue.png)
+![Setting value](SfMaskedEditImages/BF_SetValue.png)
 
 
 ## Setting Prompt Character
@@ -39,7 +39,7 @@ maskedEdit.PromptChar = '*';
 {% endhighlight %}
 {% endtabs %}
 
-![](SfMaskedEditImages/BF_Prompt.png)
+![Prompt Character](SfMaskedEditImages/BF_Prompt.png)
 
 ## Setting Hint
 
@@ -62,6 +62,6 @@ maskedEdit.HintTextSize = 20;
 {% endhighlight %}
 {% endtabs %}
 
-![](SfMaskedEditImages/BF_Hint.png)
+![Setting Hint](SfMaskedEditImages/BF_Hint.png)
 
 You can find the complete basic features sample from this [link](http://files2.syncfusion.com/Xamarin.Android/Samples/MaskedEdit_BasicFeatures.zip).

@@ -1,13 +1,13 @@
 ---
-layout : post
-title : Shapes in Syncfusion SfImageEditor control in Xamarin.Android
-description : Learn how to add shapes, text and draw over an Image in ImageEditor for Xamarin.Android
-platform : xamarin.android
-control : ImageEditor
-documentation : ug
+layout: post
+title: Shapes in Syncfusion SfImageEditor control in Xamarin.Android
+description: Learn how to add shapes, text and draw a path over an Image in syncfusion ImageEditor for Xamarin.Android
+platform: xamarin.android
+control: ImageEditor
+documentation: ug
 ---
 
-# Shapes
+# Shapes and its customization
 
 You can annotate any shapes over an image using the `AddShape` method. The following shapes are available in image editor:
 
@@ -40,6 +40,7 @@ The `PenSettings` property consists of the following properties:
 * [`Mode`](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfImageEditor.Android.PenSettings.html#Syncfusion_SfImageEditor_Android_PenSettings_Mode): Determines whether the shape color mode is `Fill` or `Stroke`. It is an enum value.
 * [`Opacity`](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfImageEditor.Android.PenSettings.html#Syncfusion_SfImageEditor_Android_PenSettings_Opacity): Denotes opacity for the desired shapes.
 * [`Bounds`](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfImageEditor.Android.PenSettings.html#Syncfusion_SfImageEditor_Android_PenSettings_Bounds): Allows to set frame for the newly added shapes (rectangle and circle). You can position the shapes wherever you want on the image.In percentage, the value of the shape frame should fall between 0 and 100.
+* [`EnableDrag`](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfImageEditor.Android.PenSettings.html#Syncfusion_SfImageEditor_Android_PenSettings_EnableDrag) - Controls the dragging of selected shape over the image.
 
 N> The `FillColor` property is applicable only if the ShapeType is `Rectangle` or `Circle`.
 
@@ -55,7 +56,7 @@ N> The `FillColor` property is applicable only if the ShapeType is `Rectangle` o
 
 {% endtabs %}
 
-![SfImageEditor](ImageEditor_images/Shapes.gif)
+![SfImageEditor](ImageEditor_images/Shapes.png)
 
 * You can annotate any path on an image using free hand drawing as shown in the following code snippet.
 
@@ -69,7 +70,7 @@ N> The `FillColor` property is applicable only if the ShapeType is `Rectangle` o
 
 {% endtabs %}
 
-![SfImageEditor](ImageEditor_images/path.gif)
+![SfImageEditor](ImageEditor_images/Path.png)
 
 ## Deleting a shape or text from view
 
