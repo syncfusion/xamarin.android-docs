@@ -68,6 +68,7 @@ Schedule supports full data binding to any type of IEnumerable source. Specify t
 | [StartTime](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.ScheduleAppointment.html#Com_Syncfusion_Schedule_ScheduleAppointment_StartTime) | This property is to map the property name of custom class which is equivalent for StartTime of ScheduleAppointment. |
 | [EndTime](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.ScheduleAppointment.html#Com_Syncfusion_Schedule_ScheduleAppointment_EndTime) | This property is to map the property name of custom class which is equivalent for EndTime of ScheduleAppointment. |
 | [Subject](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.ScheduleAppointment.html#Com_Syncfusion_Schedule_ScheduleAppointment_Subject) | This property is to map the property name of custom class which is equivalent for Subject of ScheduleAppointment. |
+| [Id](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.ScheduleAppointment.html#Com_Syncfusion_Schedule_ScheduleAppointment_Id) | This property is to map the property name of custom class which is equivalent for Id of ScheduleAppointment. |
 | [Color](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.ScheduleAppointment.html#Com_Syncfusion_Schedule_ScheduleAppointment_Color) | This property is to map the property name of custom class which is equivalent for Color of ScheduleAppointment. |
 | [IsAllDay](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.ScheduleAppointment.html#Com_Syncfusion_Schedule_ScheduleAppointment_IsAllDay) | This property is to map the property name of custom class which is equivalent for IsAllDay of ScheduleAppointment. |
 | [RecurrenceRule](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.ScheduleAppointment.html#Com_Syncfusion_Schedule_ScheduleAppointment_RecurrenceRule) | This property is to map the property name of custom class which is equivalent for RecurrenceRule of ScheduleAppointment. |
@@ -334,6 +335,7 @@ ScheduleAppointmentCollection scheduleAppointmentCollection = new ScheduleAppoin
 //Adding schedule appointment in schedule appointment collection
 var scheduleAppointment = new ScheduleAppointment()
 {
+    Id = 1,
     StartTime = startTime,
     EndTime = endTime,
     Subject = "Client Meeting",
@@ -341,7 +343,7 @@ var scheduleAppointment = new ScheduleAppointment()
 };
 
 
-//Adding schedule appointment in schedule appointment collection
+//Adding schedule appointment to the schedule appointment collection
 scheduleAppointmentCollection.Add(scheduleAppointment);
 
 // Creating recurrence rule
@@ -354,7 +356,7 @@ recurrenceProperties.RecurrenceCount = 10;
 // Setting recurrence rule to schedule appointment
 scheduleAppointment.RecurrenceRule = ScheduleHelper.RRuleGenerator(recurrenceProperties, scheduleAppointment.StartTime, scheduleAppointment.EndTime);
 
-//Adding Schedule appointment collection to SfSchedule DataSource
+//Setting the Schedule appointment collection to the  DataSource of SfSchedule
 schedule.ItemsSource = scheduleAppointmentCollection;
 {% endhighlight %}
 {% endtabs %}
@@ -445,6 +447,7 @@ recurrenceAppointment.RecurrenceExceptionDates.Clear();
 
 #### Add exception appointment to recurrence pattern
 You can change any occurrence appointment which is an exception from the recurrence pattern appointment by using the `RecurrenceId` property which is used to map the exception appointment with recurrence pattern appointment and `ExceptionOccurrenceActualDate` property which is used to mention the actual pattern occurrence date of exception appointment of `ScheduleAppointment`.
+The `RecurrenceId` of changed occurrence should holds the exact recurrence pattern appointment `Id`
 You should add the created exception recurrence appointment to the schedule `ItemsSource`.
 {% tabs %}
 {% highlight c# %}
@@ -454,6 +457,7 @@ exceptionDate.Set(2017, 08, 07, 10, 0, 0);
 // Add Recurrence appointment 
 var recurrenceAppointment = new ScheduleAppointment
 {
+    Id = 1,
 	StartTime = startTime,
 	EndTime = endTime,
 	Subject = "Daily Occurs",
@@ -469,12 +473,13 @@ var exceptionEndTime = Calendar.Instance;
 exceptionEndTime.Set(2017, 08, 07, 14, 0, 0);
 var exceptionAppointment = new ScheduleAppointment
 {
+    Id = 2,
 	StartTime = exceptionStartTime,
 	EndTime = exceptionEndTime,
 	Subject = "Meeting",
 	Color = Color.Red,
-	// Recurrence Id should be parent appointment object
-	RecurrenceId = recurrenceAppointment,
+	//Recurrence Id should be a parent appointment object Id
+	RecurrenceId = recurrenceAppointment.Id,
 	//Actual occurrence date
 	ExceptionOccurrenceActualDate = exceptionDate
 };
@@ -482,9 +487,10 @@ var exceptionAppointment = new ScheduleAppointment
 {% endtabs %}
 
 >**NOTE**
-•	`RecurrenceId` should be a recurrence pattern appointment object.
-•	Exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence is from recurrence pattern.
-•	`ExceptionOccurrenceActualDate` should be in Universal Time Coordinates (UTC) time zone.
+•   The exception appointment should have different `Id` with original pattern appointment `Id`.
+•   The `RecurrenceId` of changed occurrence should holds the exact recurrence pattern appointment `Id`.
+•	The exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence is from recurrence pattern.
+•	The `ExceptionOccurrenceActualDate` should be in Universal Time Coordinates (UTC) time zone.
 
 ![Add Recurrence exception appointment support in schedule Xamarin Android](PopulatingAppointments_images/exception_appointment.png)
 
@@ -508,8 +514,8 @@ var exceptionAppointment = new ScheduleAppointment
 	EndTime = exceptionEndTime,
 	Subject = "Meeting",
 	Color = Color.Red,
-	// set the parent appointment to recurrence Id
-	RecurrenceId = recurrenceAppointment,
+	// set the parent appointment Id to recurrence Id
+	RecurrenceId = recurrenceAppointment.Id,
 	 //Actual occurrence date
 	ExceptionOccurrenceActualDate = exceptionDate
 };
@@ -519,9 +525,10 @@ scheduleAppointmentCollection.Add(exceptionAppointment);
 {% endhighlight %}
 {% endtabs %}
 >**NOTE**
-•	`RecurrenceId` should be a recurrence pattern appointment object.
-•	Exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from recurrence pattern.
-•	`ExceptionOccurrenceActualDate` should be in Universal Time Coordinates (UTC) time zone.
+•	The exception appointment should have different `Id` with original pattern appointment `Id`.
+•   The `RecurrenceId` of changed occurrence should holds the exact recurrence pattern appointment `Id`. 
+•	The exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from recurrence pattern.
+•	The `ExceptionOccurrenceActualDate` should be in Universal Time Coordinates (UTC) time zone.
 
 #### Remove exception appointment from recurrence pattern
 You can directly remove the added exception appointment for recurrence pattern by removing it from schedule `ItemsSource`.
@@ -624,12 +631,14 @@ recurrenceAppointment.RecurrenceExceptionDates.Clear();
 
 #### Add exception appointment to recurrence pattern
 You can change any occurrence appointment which is exception from the recurrence pattern appointment by using the [RecurrenceId](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.AppointmentMapping.html#Com_Syncfusion_Schedule_AppointmentMapping_RecurrenceId) property of `AppointmentMapping` class which is used to map the custom exception appointment with schedule recurrence series appointment and [ExceptionOccurrenceActualDate](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Schedule.AppointmentMapping.html#Com_Syncfusion_Schedule_AppointmentMapping_ExceptionOccurrenceActualDate) property of `AppointmentMapping` class which is used to mention the actual series occurrence date of exception appointment of schedule recurrence appointment.
+The `RecurrenceId` of changed occurrence should holds the exact recurrence pattern appointment `Id`.
 For adding custom exception appointment to the recurrence series, add the `ActualDate` and `RecurrenceID` properties to custom class `Meeting`.
 
 {% tabs %}
 {% highlight c# %}
 public Calendar ActualDate { get; set; }
 public object RecurrenceID { get; set; }
+public object Id { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
@@ -655,6 +664,7 @@ exceptionDate.Set(2017, 08, 07);
 //Adding schedule appointment in schedule appointment collection 
 var recurrenceAppointment = new Meeting
 {
+    Id = 1,
 	From = startTime,
 	To = endTime,
 	EventName = "Daily Occurs",
@@ -670,12 +680,13 @@ var exceptionEndTime = Calendar.Instance;
 exceptionEndTime.Set(2017, 08, 07, 14, 0, 0);
 var exceptionAppointment = new Meeting
 {
+    Id = 2,
 	From = exceptionStartTime,
 	To = exceptionEndTime,
 	EventName = "Meeting",
 	Color = Color.Red,
-	// set the parent appointment to recurrence Id.
-	RecurrenceID = recurrenceAppointment,
+	// set the parent appointment Id to recurrence Id.
+	RecurrenceID = 1,
 	//Actual occurrence date
 	ActualDate = exceptionDate
 };
@@ -683,9 +694,9 @@ var exceptionAppointment = new Meeting
 {% endtabs %}
 
 >**NOTE**
-•	`RecurrenceId` should be a recurrence pattern appointment object.
-•	Exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from recurrence pattern.
-•	`ActualDate` should be in Universal Time Coordinates (UTC) time zone.
+•	The `RecurrenceId` should be a recurrence pattern appointment `Id` .
+•	The exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from recurrence pattern.
+•	The `ActualDate` should be in Universal Time Coordinates (UTC) time zone.
 
 ![Add Recurrence exception appointment support in schedule Xamarin Android](PopulatingAppointments_images/exception_appointment.png)
 
@@ -710,8 +721,8 @@ var exceptionAppointment = new Meeting
 	To = exceptionEndTime,
 	EventName = "Meeting",
 	Color = Color.Red,
-	// set the parent appointment to recurrence Id.
-	RecurrenceID = recurrenceAppointment,
+	// set the parent appointment Id to recurrence Id.
+	RecurrenceID = (recurrenceAppointment as Meeting).Id,
 	//Actual occurrence date
 	ActualDate = exceptionDate
 };
@@ -721,9 +732,10 @@ scheduleAppointmentCollection.Add(exceptionAppointment);
 {% endtabs %}
 
 >**NOTE**
-•	`RecurrenceId` should be a recurrence pattern appointment object.
-•	Exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from recurrence pattern.
-•	`ActualDate` should be in Universal Time Coordinates (UTC) time zone.
+•   The `RecurrenceId` should be a recurrence pattern appointment `Id`.
+•	The exception appointment should have different `Id` with original pattern appointment `Id`.
+•	The exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from recurrence pattern.
+•	The `ActualDate` should be in Universal Time Coordinates (UTC) time zone.
 
 
 #### Remove exception appointment from recurrence pattern
