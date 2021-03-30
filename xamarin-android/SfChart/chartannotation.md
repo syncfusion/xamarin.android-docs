@@ -443,16 +443,21 @@ chart.Annotations.Add(horizontal);
 
 The default appearance of the axis labels can be customized by using [`AxisLabelStyle`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.VerticalLineAnnotation.html#Com_Syncfusion_Charts_VerticalLineAnnotation_AxisLabelStyle) property. The following properties of [`AxisLabelStyle`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.HorizontalLineAnnotation.html#Com_Syncfusion_Charts_HorizontalLineAnnotation_AxisLabelStyle) are used to customize the axis label:
 
-* [`TextColor`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_TextColor) – Used to change the color of the text.
-* [`BackgroundColor`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_BackgroundColor) – Used to change the background color of the text.
-* [`StrokeColor`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_StrokeColor) – Used to change the border color.
-* [`StrokeWidth`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_StrokeWidth) – Used to change the width of the border.
-* [`TextSize`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_TextSize) – Used to change the text size.
-* [`Typeface`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_Typeface) – Used to change the font family and font weight.
-* [`MarginTop`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_MarginTop) – Used to change the top margin of the text.
-* [`MarginBottom`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_MarginBottom) – Used to change the bottom margin of the text.
-* [`MarginLeft`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_MarginLeft) – Used to change the left margin of the text.
-* [`MarginRight`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_MarginRight) – Used to change the right margin of the text.
+* [`TextColor`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_TextColor) - Used to change the color of the text.
+* [`BackgroundColor`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_BackgroundColor) - Used to change the background color of the text.
+* [`StrokeColor`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_StrokeColor) - Used to change the border color.
+* [`StrokeWidth`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_StrokeWidth) - Used to change the width of the border.
+* [`TextSize`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_TextSize) - Used to change the text size.
+* [`Typeface`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_Typeface) - Used to change the font family and font weight.
+* [`MarginTop`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_MarginTop) - Used to change the top margin of the text.
+* [`MarginBottom`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_MarginBottom) - Used to change the bottom margin of the text.
+* [`MarginLeft`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_MarginLeft) - Used to change the left margin of the text.
+* [`MarginRight`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartLabelStyle.html#Com_Syncfusion_Charts_ChartLabelStyle_MarginRight) - Used to change the right margin of the text.
+* [`LabelAlignment`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartAxisLabelStyle.html#Com_Syncfusion_Charts_ChartAxisLabelStyle_LabelAlignment) - Used to align the text at the [`Start`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartAxisLabelAlignment.html), [`Center`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartAxisLabelAlignment.html), or [`End`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartAxisLabelAlignment.html).
+* [`LabelsPosition`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartAxisLabelStyle.html#Com_Syncfusion_Charts_ChartAxisLabelStyle_LabelsPosition) - Used to position the text at [`Inside`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.AxisElementPosition.html#Com_Syncfusion_Charts_AxisElementPosition_Inside) or [`outside`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.AxisElementPosition.html#Com_Syncfusion_Charts_AxisElementPosition_Outside) of the chart axis. By default, the text will be positioned outside the chart axis.
+* [`CornerRadius`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartAxisLabelStyle.html#Com_Syncfusion_Charts_ChartAxisLabelStyle_CornerRadius) - Used to change the corner radius of the background of the text.
+* [`MaxWidth`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartAxisLabelStyle.html#Com_Syncfusion_Charts_ChartAxisLabelStyle_MaxWidth) - Provides the maximum text width of the axis label and wraps to the next line when exceeds the maximum width.
+* [`WrappedLabelAlignment`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartAxisLabelStyle.html#Com_Syncfusion_Charts_ChartAxisLabelStyle_WrappedLabelAlignment) - Position the wrapped text at the start, center, or end. The default value of the [`WrappedLabelAlignment`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Charts.ChartAxisLabelStyle.html#Com_Syncfusion_Charts_ChartAxisLabelStyle_WrappedLabelAlignment) property is set to Start.
 
 {% highlight c# %} 
 [C#]
@@ -487,6 +492,8 @@ vertical.AxisLabelStyle.BackgroundColor = Color.Red;
 
 vertical.AxisLabelStyle.TextColor = Color.White;
 
+vertical.AxisLabelStyle.CornerRadius = new ChartCornerRadius(5);
+
 chart.Annotations.Add(vertical);
 
 HorizontalLineAnnotation horizontal = new HorizontalLineAnnotation()
@@ -516,11 +523,13 @@ horizontal.AxisLabelStyle.BackgroundColor = Color.Red;
 
 horizontal.AxisLabelStyle.TextColor = Color.White;
 
+horizontal.AxisLabelStyle.LabelAlignment = ChartAxisLabelAlignment.Start;
+
 chart.Annotations.Add(horizontal);
 
 {% endhighlight %}
 
-![Customizing axis label in Xamarin.Android Chart](chartannotation_images/img13.png)  
+![Customizing axis label in Xamarin.Android Chart](chartannotation_images/ChartAxisLabelStyleImage.png)  
 
 **Adding arrow to vertical and horizontal line annotations**
 
