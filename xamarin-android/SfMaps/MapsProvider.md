@@ -140,7 +140,9 @@ The ImageryLayer provides support to reset the maps to the default view when you
 
 ## GeoCoordinates
 
-The `GeoCoordinates` property allows you view the desired area at the center on loading. By default, the `GeoCoordinates` value is (0,0). So, the latitude value "0" and longitude value "0" are shown at the center.
+The [`GeoCoordinates`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_GeoCoordinates) property allows you view the desired area at the center on loading. By default, the [`GeoCoordinates`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_GeoCoordinates) value is (0,0). So, the latitude value "0" and longitude value "0" are shown at the center.
+
+On changing the [`GeoCoordinates`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_GeoCoordinates) point dynamically, map will provide transition animation from the previous geo coordinates to the new geo coordinates value.
 
 {% tabs %}
 
@@ -156,7 +158,7 @@ The `GeoCoordinates` property allows you view the desired area at the center on 
 
 {% endtabs %}
 
-![Geo-Coordinate image](Images/Coordinate.png)
+![Geo-Coordinate change with animation](Images/MapsAnimation.gif)
 
 {% tabs %}
 
