@@ -9,15 +9,15 @@ documentation: ug
 
 # Map providers support in SfMaps
 
-The maps control supports map providers such as OpenStreetMap and Bing Maps that can be added to an imagery layer in maps.
+The maps control supports map providers such as [`OpenStreetMap`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_OSM) and [`Bing Maps`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_Bing) that can be added to an imagery layer in maps.
 
 ## OpenStreetMap
 
-The OpenStreetMap (OSM) is a world map; it was built by a community of mappers. It is free to use under an open license. This allows you view geographical data in a collaborative way from anywhere on the earth. The OSM provides small tile images based on your requests and combines them into a single image to display the map area in the maps control. 
+The OpenStreetMap (OSM) is a world map; it was built by a community of mappers. It is free to use under an open license. This allows you view geographical data in a collaborative way from anywhere on the earth. The [`OSM`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_OSM) provides small tile images based on your requests and combines them into a single image to display the map area in the maps control. 
 
 ### Adding OSM in maps
 
-The maps control uses `imagery layer` to display the tile images from the OSM service. To use `OSM`, add an imagery layer in maps’ layers collection.
+The maps control uses [`ImageryLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html) to display the tile images from the OSM service. To use [`OSM`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_OSM), add an imagery layer in maps’ layers collection.
 
 {% tabs %}
 
@@ -33,11 +33,11 @@ The maps control uses `imagery layer` to display the tile images from the OSM se
 
 ![OSM image](Images/OSM.png)
 
-N> Both the [`ShapeFileLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ShapeFileLayer.html) and `ImageryLayer` have been derived commonly from MapsLayer.
+N> Both the [`ShapeFileLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ShapeFileLayer.html) and [`ImageryLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html) have been derived commonly from MapsLayer.
 
 ## Bing Maps
 
-The Bing Maps is a world map owned by Microsoft. As OSM, Bing Maps also provides map tile images based on your requests and combines them into a single image to display the map area. To use `Bing maps`, set the `LayerType` property of ImageryLayer to “Bing”. Then, set the Bing Maps key, which is obtained from [Bing Maps Key](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key).
+The [`Bing Maps`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_Bing) is a world map owned by Microsoft. As OSM, Bing Maps also provides map tile images based on your requests and combines them into a single image to display the map area. To use [`Bing maps`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_Bing), set the [`LayerType`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html) property of ImageryLayer to “Bing”. Then, set the Bing Maps key, which is obtained from [Bing Maps Key](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key).
 
 {% tabs %}
 
@@ -55,25 +55,25 @@ The Bing Maps is a world map owned by Microsoft. As OSM, Bing Maps also provides
 
 ![Bing map image](Images/Road.png)
 
-N> The `LayerType` property of `ImageryLayer` provides support to `OSM` and `Bing Maps`. The default value of the `LayerType` property is OSM.
+N> The [`LayerType`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html) property of [`ImageryLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html) provides support to [`OSM`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_OSM) and [`Bing Maps`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_Bing). The default value of the [`LayerType`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html) property is [`OSM`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_OSM).
 
 ## BingMapStyle
 
-The ImageryLayer provides support to the following types of Bing Maps:
+The [`ImageryLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html) provides support to the following types of [`Bing Maps`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_Bing):
 
 * `Road`
 * `Aerial`
 * `AerialWithLabels`
 
-The desired style for the Bing Maps can be set using the `BingMapStyle` property of ImageryLayer. The default value of `BingMapStyle` is "Road".
+The desired style for the [`Bing Maps`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_Bing) can be set using the [`BingMapStyle`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html) property of [`ImageryLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html). The default value of [`BingMapStyle`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html) is [`Road`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html#Com_Syncfusion_Maps_BingMapStyle_Road).
 
 ### Road
 
-The Road view displays the default map view of roads, buildings, and geography. The default value of the `BingMapStyle` property of imagery layer is "Road".
+The Road view displays the default map view of roads, buildings, and geography. The default value of the [`BingMapStyle`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html) property of [`ImageryLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html) is [`Road`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html#Com_Syncfusion_Maps_BingMapStyle_Road).
 
 ### Aerial
 
-The Aerial view displays the satellite images to highlight the roads and major landmarks for easy identification. The aerial view can be applied to maps by setting the `BingMapStyle` to "Aerial".
+The Aerial view displays the satellite images to highlight the roads and major landmarks for easy identification. The aerial view can be applied to maps by setting the [`BingMapStyle`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html) to [`Aerial`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html#Com_Syncfusion_Maps_BingMapStyle_Aerial).
 
 {% tabs %}
 
@@ -94,7 +94,7 @@ The Aerial view displays the satellite images to highlight the roads and major l
 
 ## AerialWithLabel
 
-The AerialWithLabel view displays the Aerial map with labels for continent, country, ocean, etc. This view can be applied to maps by setting the `BingMapStyle` to "AerialWithLabel".
+The [`AerialWithLabel`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html#Com_Syncfusion_Maps_BingMapStyle_AerialWithLabels) view displays the Aerial map with labels for continent, country, ocean, etc. This view can be applied to maps by setting the [`BingMapStyle`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html) to [`AerialWithLabel`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.BingMapStyle.html#Com_Syncfusion_Maps_BingMapStyle_AerialWithLabels).
 
 {% tabs %}
 
@@ -115,7 +115,7 @@ The AerialWithLabel view displays the Aerial map with labels for continent, coun
 
 ## Zooming and panning
 
-The maps control provides interactive zooming and panning supports to OSM and Bing Maps.
+The maps control provides interactive zooming and panning supports to [`OSM`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_OSM) and [`Bing Maps`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.LayerType.html#Com_Syncfusion_Maps_LayerType_Bing).
 
 Zooming helps you get a closer look of an area on maps for in-depth analysis. Panning helps you move a map around to focus the targeted area. You can perform zooming and panning with the pinching gesture in a map area.
 
@@ -123,7 +123,7 @@ Zooming helps you get a closer look of an area on maps for in-depth analysis. Pa
 
 ## ResetOnDoubleTap
 
-The ImageryLayer provides support to reset the maps to the default view when you double tap the imagery layer by setting the `ResetOnDoubleTap` property to true. The default value of this property is true. This behavior can be restricted by setting the `ResetOnDoubleTap` property to false.
+The [`ImageryLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html) provides support to reset the maps to the default view when you double tap the imagery layer by setting the [`ResetOnDoubleTap`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_ResetOnDoubleTap) property to true. The default value of this property is true. This behavior can be restricted by setting the [`ResetOnDoubleTap`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_ResetOnDoubleTap) property to false.
 
 {% tabs %}
 
@@ -178,8 +178,8 @@ On changing the [`GeoCoordinates`](https://help.syncfusion.com/cr/xamarin-androi
 
 ## Markers
 
-As [`ShapeFileLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ShapeFileLayer.html), markers also can be added to imagery layer. Markers can be customized using the `MarkerSettings` property in imagery layer.
-The detailed explanation of marker and its customization have been provided in Markers section.
+As [`ShapeFileLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ShapeFileLayer.html), markers also can be added to imagery layer. [`Markers`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.MapLayer.html#Com_Syncfusion_Maps_MapLayer_Markers) can be customized using the [`MarkerSettings`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.MarkerSetting.html) property in imagery layer.
+The detailed explanation of marker and its customization have been provided in [`Markers`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.MapLayer.html#Com_Syncfusion_Maps_MapLayer_Markers) section.
 
 {% tabs %}
 
@@ -267,9 +267,9 @@ This feature is used to calculate the initial zoom level automatically in two wa
 
 ### Distance in radius 
 
-Calculate the initial zoom level automatically based on the `Radius` and `DistanceType` properties of imagery layer class.
+Calculate the initial zoom level automatically based on the [`Radius`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_Radius) and [`DistanceType`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.DistanceType.html) properties of [`ImageryLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html) class.
 
-N> `DistanceType` property default value is KiloMeter.
+N> [`DistanceType`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.DistanceType.html) property default value is [`KiloMeter`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.DistanceType.html#Com_Syncfusion_Maps_DistanceType_KiloMeter).
 
 {% tabs %}
 
@@ -318,7 +318,7 @@ N> `DistanceType` property default value is KiloMeter.
 
 ### Geo-bounds
 
-Calculate the initial zoom level automatically based on the LatLngBounds(Northeast, Southwest) of imagery layer class.
+Calculate the initial zoom level automatically based on the [`LatLngBounds(Northeast, Southwest)`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_LatLngBounds) of [`ImageryLayer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html) class.
 
 {% tabs %}
 
@@ -366,13 +366,13 @@ Calculate the initial zoom level automatically based on the LatLngBounds(Northea
 
 {% endtabs %}
 
-N> When setting LatLngBounds and DistanceRadius at the same time, the priority is `DistanceRadius` and calculate zoom level based radius value.
+N> When setting [`LatLngBounds`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_LatLngBounds) and DistanceRadius at the same time, the priority is [`DistanceRadius`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_Radius) and calculate zoom level based radius value.
 
 ![SfMaps zoom level changed image](Images/ZoomLevel.png)
 
 ## Get the map tile layer bounds
 
-You can get imagery layer pixel bounds by using `MapBounds` property while zooming, panning, and changing Geo-Coordinate value in imagery layer.
+You can get imagery layer pixel bounds by using [`MapBounds`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Maps.ImageryLayer.html#Com_Syncfusion_Maps_ImageryLayer_MapBounds) property while zooming, panning, and changing Geo-Coordinate value in imagery layer.
 
 {% tabs %}
 
