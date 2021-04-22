@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Download and Installation in Mac | Xamarin.Android | Syncfusion
-description: Download and Installation in Mac
+description: This section provides information on how to download and install Syncfusion Xamarin.Android Controls on Mac.
 platform: Xamarin.Android
 control: Download and Installation 
 documentation: ug
 ---
 
-# Mac
+# Download and Installation of Xamarin.Android controls in Mac
 
 ## Download directly from website
 
-You can download the complete Xamarin.Android component from [here](https://www.syncfusion.com/downloads/latest-version).
+You can download the complete Xamarin.Android component from [here](https://www.syncfusion.com/downloads/xamarin).
 
 **MAC Installer (pkg)**
 
