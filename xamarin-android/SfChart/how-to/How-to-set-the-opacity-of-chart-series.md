@@ -28,4 +28,6 @@ The code sample demonstrated as follows.
             chart.Series.Add(series);
 ...
 
+{% endhighlight %}
+
 ![opacity support in Xamarin.Android Chart](images/Alpha.png)
