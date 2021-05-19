@@ -2,14 +2,14 @@
 
 layout: post
 title: Pointers in Syncfusion SfCircularGauge control for Xamarin.Android 
-description: Learn about pointers in Syncfusion SfCircularGauge control
+description: This section describes in detail about pointers and its customization in Syncfusion SfCircularGauge control.
 platform: Xamarin.Android
 control: SfCircularGauge
 documentation: ug
 
 ---
 
-# Pointers
+# Pointers and its customization
 
 You can add multiple pointers to the gauge to point multiple values on the same scale. It is used to show low and high values at the same time. The value of the pointer is set by using the [`Value`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Gauges.SfCircularGauge.CircularPointer.html#Com_Syncfusion_Gauges_SfCircularGauge_CircularPointer_Value) property.
 
@@ -32,7 +32,7 @@ You can add multiple pointers to the gauge to point multiple values on the same 
 
 {% endhighlight %}
 
-![](pointers_images/needle-pointer/default.png)
+![Needle pointer](pointers_images/needle-pointer/default.png)
 
 ### Setting needle pointer type
 
@@ -59,7 +59,7 @@ The appearance of the needle pointer can be customized by using the [`Type`](htt
 
 {% endhighlight %}
 
-![](pointers_images/needle-pointer/bar-pointer.png)
+![Bar pointer](pointers_images/needle-pointer/bar-pointer.png)
 
 ### Setting needle pointer type
 
@@ -79,7 +79,7 @@ The appearance of the needle pointer can be customized by using the [`Type`](htt
 
 {% endhighlight %}
 
-![](pointers_images/needle-pointer/needle-pointer.png)
+![Needle pointer type](pointers_images/needle-pointer/needle-pointer.png)
 
 ### Needle pointer customization
 
@@ -103,7 +103,7 @@ The length of the needle is controlled by using the [`LengthFactor`](https://hel
 
 {% endhighlight %}
 
-![](pointers_images/needle-pointer/needle-customization.png)
+![Needle pointer customization](pointers_images/needle-pointer/needle-customization.png)
 
 ### Knob customization
 
@@ -128,7 +128,7 @@ Knob of the needle pointer can be customized by using the [`KnobColor`](https://
 
 {% endhighlight %}
 
-![](pointers_images/needle-pointer/knob-customization.png)
+![Knob customization](pointers_images/needle-pointer/knob-customization.png)
 
 ### Setting tail for needle pointer
 
@@ -154,7 +154,7 @@ Tail of the needle pointer can be customized by using the [`TailColor`](https://
 
 {% endhighlight %}
 
-![](pointers_images/needle-pointer/tail.png)
+![Tail for needle pointer](pointers_images/needle-pointer/tail.png)
 
 ## Range pointer
 
@@ -176,7 +176,7 @@ A range pointer is an accenting line or shaded background range that can be plac
 
 {% endhighlight %}
 
-![](pointers_images/range-pointer/range-pointer.png)
+![Range pointer](pointers_images/range-pointer/range-pointer.png)
 
 ### Range pointer customization
 
@@ -200,7 +200,7 @@ The range pointer’s UI is customized by using the [`Color`](https://help.syncf
 
 {% endhighlight %}
 
-![](pointers_images/range-pointer/rangepointer-customization.png)
+![Range pointer customization](pointers_images/range-pointer/rangepointer-customization.png)
 
 ### Setting position for range pointer
 
@@ -228,7 +228,7 @@ The [`RangePointer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusi
 
 {% endhighlight %}
 
-![](pointers_images/range-pointer/rangepointer-offset.png)
+![Offset for range pointer](pointers_images/range-pointer/rangepointer-offset.png)
 
 #### Setting start and end offset for range pointer
 
@@ -250,7 +250,7 @@ The [`RangePointer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusi
 
 {% endhighlight %}
 
-![](pointers_images/range-pointer/rangepointer-start-end-offset.png)
+![Start and end offset for range pointer](pointers_images/range-pointer/rangepointer-start-end-offset.png)
 
 ### Setting range cap for range pointer
 
@@ -280,7 +280,7 @@ The [`RangeCap`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.G
 
 {% endhighlight %}
 
-![](pointers_images/range-pointer/range-cap.png)
+![Range cap for range pointer](pointers_images/range-pointer/range-cap.png)
 
 ## Marker pointer
 
@@ -311,7 +311,7 @@ The image is used to denote the pointer value instead of rendering the marker sh
 
 {% endhighlight %}
 
-![](pointers_images/marker-pointer/marker-pointer.png)
+![Marker pointer](pointers_images/marker-pointer/marker-pointer.png)
 
 ### Setting image marker shape
 
@@ -332,7 +332,7 @@ The image is used to denote the pointer value instead of rendering the marker sh
 
 {% endhighlight %}
 
-![](pointers_images/marker-pointer/image.png)
+![Image marker shape](pointers_images/marker-pointer/image.png)
 
 ### Marker pointer customization
 
@@ -357,7 +357,7 @@ The marker can be customized in terms of color, width, and height by using the [
 
 {% endhighlight %}
 
-![](pointers_images/marker-pointer/markerpointer-customization.png)
+![Marker pointer customization](pointers_images/marker-pointer/markerpointer-customization.png)
 
 ### Setting multiple pointers
 
@@ -397,7 +397,7 @@ In addition to the default pointer, you can add n number of pointers to a scale 
 
 {% endhighlight %}
 
-![](pointers_images/marker-pointer/multiple-pointers.png)
+![Multiple pointers](pointers_images/marker-pointer/multiple-pointers.png)
 
 ### Setting animation for pointer
 
@@ -449,7 +449,7 @@ The [`EnableAnimation`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncf
 
 {% endhighlight %}
 
-![](pointers_images/marker-pointer/animation.gif)
+![Animation for pointer](pointers_images/marker-pointer/animation.gif)
 
 ### Setting pointer drag
 
@@ -485,4 +485,41 @@ Pointers can be dragged over the scale value. It can be achieved by clicking and
 
 {% endhighlight %}
 
-![](pointers_images/marker-pointer/pointer-interaction.gif)
+![Pointer drag](pointers_images/marker-pointer/pointer-interaction.gif)
+
+### Step frequency
+
+The [`StepFrequency`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Gauges.SfCircularGauge.MarkerPointer.html#Com_Syncfusion_Gauges_SfCircularGauge_MarkerPointer_StepFrequency) property is used to specify the interval between snap points while dragging the [`MarkerPointer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Gauges.SfCircularGauge.MarkerPointer.html) or [`NeedlePointer`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Gauges.SfCircularGauge.NeedlePointer.html).
+
+For example, when the value of [`StepFrequency`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Gauges.SfCircularGauge.MarkerPointer.html#Com_Syncfusion_Gauges_SfCircularGauge_MarkerPointer_StepFrequency) is 20, then while dragging, the pointer will not move continuously, instead it will update in terms of 20.
+
+N> To work with the [`StepFrequency`](https://help.syncfusion.com/cr/xamarin-android/Com.Syncfusion.Gauges.SfCircularGauge.MarkerPointer.html#Com_Syncfusion_Gauges_SfCircularGauge_MarkerPointer_StepFrequency) value, enable pointer dragging support.
+
+{% highlight c# %}
+
+            SfCircularGauge circularGauge = new SfCircularGauge(this);
+            ObservableCollection<CircularScale> scales = new ObservableCollection<CircularScale>();
+            CircularScale scale = new CircularScale();
+            scale.StartValue = 0;
+            scale.EndValue = 100;
+
+            MarkerPointer markerPointer = new MarkerPointer();
+            markerPointer.Value = 70;
+            markerPointer.EnableDragging = true;
+            markerPointer.StepFrequency = 20;
+            markerPointer.EnableAnimation = false;
+            scale.CircularPointers.Add(markerPointer);
+
+            NeedlePointer needlePointer = new NeedlePointer();
+            needlePointer.Value = 40;
+            needlePointer.EnableDragging = true;
+            needlePointer.StepFrequency = 5;
+            needlePointer.EnableAnimation = false;
+            scale.CircularPointers.Add(needlePointer);
+
+            scales.Add(scale);
+            circularGauge.CircularScales = scales;
+            SetContentView(circularGauge);
+
+{% endhighlight %}
+
