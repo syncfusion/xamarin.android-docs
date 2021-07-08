@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customizing PullableContent | SfPullToRefresh | Xamarin.Android | Syncfusion
-description: Customizing the PullableContent of SfPullToRefresh
+title: Customizing PullableContent | Xamarin.Android | Syncfusion
+description: How to add customized pullable content of SfPullToRefresh and refresh it in Xamarin.Android DataGrid (SfDataGrid).
 platform: Xamarin.Android
 control: SfPullToRefresh
 documentation: ug
@@ -104,7 +104,7 @@ public void RefreshItemSource()
 The final output of the sample of SfPullToRefresh adapting ListView as its pullable content is as follows:
 
 <div style="text-align:center" markdown="1">
-![](customizing_pullableContent_images/ListView_Refresh_Android.gif)
+![ListView in Xamarin Android PullToRefresh](customizing_pullableContent_images/ListView_Refresh_Android.gif)
 </div>
 
 ## SfDataGrid
@@ -183,7 +183,7 @@ private async void PullToRefresh_Refreshing(object sender, RefreshingEventArgs e
 The final output of the sample of SfPullToRefresh adapting SfDataGrid as its pullable content is as follows:
 
 <div style="text-align:center" markdown="1">
-![](customizing_pullableContent_images/SfDataGrid_Refresh_Android.gif)
+![DataGrid in Xamarin Android PullToRefresh](customizing_pullableContent_images/SfDataGrid_Refresh_Android.gif)
 </div>
 
 ## Custom layout
@@ -309,7 +309,7 @@ protected override void OnCreate (Bundle bundle)
 The final output of the above sample is as follows:
 
 <div style="text-align:center" markdown="1">
-![](overview_images/WeatherData_Refresh_Android.gif)
+![Weather Data in Xamarin Android PullToRefresh](overview_images/WeatherData_Refresh_Android.gif)
 </div>
 
 ## Samples
