@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Height Customization | SfDataGrid | Xamarin.Android | Syncfusion
-description: How to customize the height of rows in a SfDataGrid.
+description: How to customize the height of rows in Syncfusion Xamarin.Android SfDataGrid Control, its elements, and more.
 platform: Xamarin.Android
 control: SfDataGrid
 documentation: ug
@@ -154,7 +154,7 @@ private void DataGrid_QueryRowHeight (object sender, QueryRowHeightEventArgs
 } 
 {% endhighlight %}
 
-![](SfDataGrid_images/AutoRowHeight_Android.png)
+![SfDataGrid_images1](SfDataGrid_images/AutoRowHeight_Android.png)
 
 ## Customize caption summary row height
 
@@ -176,7 +176,7 @@ private void DataGrid_QueryRowHeight(object sender, QueryRowHeightEventArgs e)
 }
 {% endhighlight %}
 
-![](SfDataGrid_images/CaptionSummaryRowHeight.Android.png)
+![SfDataGrid_images2](SfDataGrid_images/CaptionSummaryRowHeight.Android.png)
 
 ## Customize table summary row height
 
@@ -198,7 +198,7 @@ private void DataGrid_QueryRowHeight(object sender, QueryRowHeightEventArgs e)
 }
 {% endhighlight %}
 
-![](SfDataGrid_images/TableSummaryRowHeight.Android.png)
+![SfDataGrid_images3](SfDataGrid_images/TableSummaryRowHeight.Android.png)
 
 ## How to ?
 

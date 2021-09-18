@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Grouping | SfDataGrid | Xamarin.Android | Syncfusion
-description: How to group a column in a SfDataGrid and about the properites and customizations in grouping.
+description: How to group a column in a SfDataGrid and about the properites and customizations in grouping, its elements, and more.
 platform: Xamarin.Android
 control: SfDataGrid
 documentation: UG
 ---
 
-# Grouping 
+# Grouping in Xamarin.Android SfDataGrid
 
 A group represents a collection of records of a category. When grouping is applied, the data is organized into a hierarchical structure based on matching field values. The records having identical values in the grouped column are combined to form a group. Each group is identified by its [CaptionSummaryRow](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfDataGrid.SfDataGrid.html#Syncfusion_SfDataGrid_SfDataGrid_CaptionSummaryRow) to get the underlying records in view.
 
@@ -34,7 +34,7 @@ The following code example illustrates how to apply grouping to a column in the 
 
 The following screenshot shows the output rendered when grouping is applied:
 
-![](SfDataGrid_images/Grouping.png)
+![SfDataGrid_images1](SfDataGrid_images/Grouping.png)
 
 ## MultiGrouping
 
@@ -47,7 +47,7 @@ this.dataGrid.GroupingMode = GroupingMode.Multiple;
 {% endhighlight %}
 
 The following screenshot shows the output rendered when above code is executed:
-![](SfDataGrid_images/MultiColumnGrouping.png)
+![SfDataGrid_images2](SfDataGrid_images/MultiColumnGrouping.png)
 
 ## Indent column customizations
 
@@ -86,7 +86,7 @@ public class CustomStyle : DataGridStyle
 {% endhighlight %}
 
 The following screenshot shows the output rendered when above code is executed:
-![](SfDataGrid_images/IndentColumnStyling.png)
+![SfDataGrid_images3](SfDataGrid_images/IndentColumnStyling.png)
 
 ## Expand groups while grouping
  
@@ -126,7 +126,7 @@ this.dataGrid.ExpandGroup(group);
 this.dataGrid.CollapseGroup(group);
 {% endhighlight %}
 
-![](SfDataGrid_images/GroupExpandCollapse.png)
+![SfDataGrid_images4](SfDataGrid_images/GroupExpandCollapse.png)
 
 ## Custom grouping
 
@@ -184,7 +184,7 @@ cargoWeight.Format = "#";
 
 The following screenshot shows the comparison between the two group modes. GroupMode.Value on the left and GroupMode.Display on the right.
 
-![](SfDataGrid_images/GroupMode.png)
+![SfDataGrid_images5](SfDataGrid_images/GroupMode.png)
 
 ## Clearing or removing a group
 
@@ -236,7 +236,7 @@ public class MainActivity : Activity
 
 Run the application to render the following output:
 
-![](SfDataGrid_images/Remove_Grouping.png)
+![SfDataGrid_images6](SfDataGrid_images/Remove_Grouping.png)
 
 N> You can also clear or remove grouping on [GridTapped event](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfDataGrid.SfDataGrid.html), [GridDoubleTapped event](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfDataGrid.SfDataGrid.html), or [GridLongPressed event](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfDataGrid.SfDataGrid.html).
 
@@ -252,7 +252,7 @@ The `GroupChangingEventArgs` of the `GroupExpanding` event provides the informat
 
 `Cancel`: Decides to cancel the group expansion.
  
-You can cancel the group expansion by setting the [GroupChangingEventArgs.Cancel](http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(System.ComponentModel.CancelEventArgs.Cancel)&rd=true) to `true`.
+You can cancel the group expansion by setting the [GroupChangingEventArgs.Cancel](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?f1url=%3FappId%3DDev10IDEF1%26l%3DEN-US%26k%3Dk(System.ComponentModel.CancelEventArgs.Cancel)%26rd%3Dtrue&view=net-5.0) to `true`.
 
 {% highlight c# %}
 this.dataGrid.GroupExpanding += dataGrid_GroupExpanding;
@@ -282,7 +282,7 @@ The `GroupChangingEventArgs` of the `GroupCollapsing` event provides the informa
 
 `Cancel`: Decides to cancel the group collapsing.
 
-You can cancel the group is being collapsed by using [GroupChangingEventArgs.Cancel](http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(System.ComponentModel.CancelEventArgs.Cancel)&rd=true) of the `GroupCollapsing` event.
+You can cancel the group is being collapsed by using [GroupChangingEventArgs.Cancel](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?f1url=%3FappId%3DDev10IDEF1%26l%3DEN-US%26k%3Dk(System.ComponentModel.CancelEventArgs.Cancel)%26rd%3Dtrue&view=net-5.0) of the `GroupCollapsing` event.
 
 {% highlight c# %}
 this.dataGrid.GroupCollapsing += dataGrid_GroupCollapsing;

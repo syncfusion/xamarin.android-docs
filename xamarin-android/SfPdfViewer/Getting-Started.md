@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  View & review PDF using PDF Viewer Xamarin.Android | Syncfusion
-description: Getting started section demonstrates how to create an application that displays a PDF file using Xamarin.Android PDF Viewer
+title: Getting Started with Xamarin.Android PDF Viewer Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential Xamarin.Android PDF Viewer Control, its elements, and more.
 platform: Xamarin.Android
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting started about SfPdfViewer
+# Getting Started with Xamarin.Android PDF Viewer
 
-This section demonstrates how to create an application that displays a PDF file using SfPdfViewer control.
+This section demonstrates how to create an application that displays a PDF file using [Xamarin.Android PDF Viewer](https://www.syncfusion.com/xamarin-android-ui-controls/pdf-viewer) (SfPdfViewer) control.
 
 ## Assemblies Required
 
@@ -85,7 +85,7 @@ Deploying this project in the Android device would display the PDF document and 
 
 ## Unloading PDF document from the Viewer
 
-The SfPdfViewer control allows you to unload the PDF document from the viewer, when the PDF document is not in use anymore. This releases the PDF document and all its associated resources of the application.
+The Xamarin.Android PDF Viewer (SfPdfViewer) control allows you to unload the PDF document from the viewer, when the PDF document is not in use anymore. This releases the PDF document and all its associated resources of the application.
 
 You need to call the Unload method of SfPdfViewer control as in the below code snippet to achieve the same.
 
@@ -380,9 +380,26 @@ private void PageDownButton_Click(object sender, System.EventArgs e)
 
 N>When the current page is the first page, GoToPreviousPage method will not have any effect. Similarly, when in last page, GoToNextPage method will not have any effect.
 
+## How to get the list of annotations present in the PDF?
+
+By using `Annotations` property, You can get the list of annotations present in the PDF document.
+  .
+Refer the following code sample.
+
+{% tabs %}
+{% highlight c# %}
+
+//Gets the list annotations present in the PDF
+var annotations = pdfViewer.Annotations;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The list remains empty if the PDF does not have any pre-existing annotations.
+
 ## Rendering the appearance content of annotations
 
-By  default,  the  PDF  viewer  does  not  render  the  appearance  content  of annotations. But the appearance can be rendered by flattening the annotations before loading the PDF. This can be achieved by setting the [Flatten](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.AnnotationSettings.html#Syncfusion_SfPdfViewer_Android_AnnotationSettings_Flatten) API to true. The default value of the API is set to false.
+By default, the PDF Viewer does not render the appearance content of annotations. But the appearance can be rendered by flattening the annotations before loading the PDF. This can be achieved by setting the [Flatten](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.AnnotationSettings.html#Syncfusion_SfPdfViewer_Android_AnnotationSettings_Flatten) API to true. The default value of the API is set to false.
 
 {% tabs %}
 {% highlight c# %}
@@ -396,7 +413,7 @@ pdfViewerControl.LoadDocument(stream);
 {% endhighlight %}
 {% endtabs %}
 
-N>Annotations are only flattened when the page is rendered in the viewer only  for  viewing  the  appearance  of  annotations.  Once,  the  annotations  have flattened  the  interactions  such  as  select,  edit,  resize,  and  remove  cannot  be performed.  Setting  the  [Flatten](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.AnnotationSettings.html#Syncfusion_SfPdfViewer_Android_AnnotationSettings_Flatten)  API  to  true  does  not  affect  the  save  and annotation export operations and the annotations will not be flattened in these operations.
+N>Annotations are only flattened when the page displayed in the viewer is only for viewing the appearance of annotations. Once the annotations are flattened, the interactions such as select, edit, resize, and remove cannot be performed. Setting the [Flatten](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.AnnotationSettings.html#Syncfusion_SfPdfViewer_Android_AnnotationSettings_Flatten) property to `true` will does not affect the save and annotation export operations. The annotations will not be flattened in these operations.
 
 ## Designing a toolbar
 
