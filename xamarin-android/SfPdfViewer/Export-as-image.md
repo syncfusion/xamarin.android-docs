@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PDF to images conversion using PDF Viewer Xamarin.Android | Syncfusion
+title: Exporting as images using PDF Viewer Xamarin.Android | Syncfusion
 description: Convert pages of the PDF to image stream with custom scale factor using Syncfusion Xamarin.Android PDF Viewer control, its elements, and more.
 platform: Xamarin.Android
 control: SfPdfViewer

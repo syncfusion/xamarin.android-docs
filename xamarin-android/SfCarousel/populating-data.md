@@ -1,13 +1,13 @@
 ---
-layout : post
-title : Populating data in Syncfusion Carousel control in Xamarin.Android
-description : Learn how to set the DataSource in Carousel for Xamarin.Android
-platform : Xamarin.Android
-control : Carousel
-documentation : ug
+layout: post
+title: Populating data in Syncfusion Carousel control in Xamarin.Android
+description: Learn details about how to set the DataSource, set the customview, adapter support and selected index in Carousel for Xamarin.Android platform
+platform: Xamarin.Android
+control: Carousel
+documentation: ug
 ---
 
-# Populating Data
+# Populating Data in Xamarin.Android Carousel (SfCarousel)
 
 `DataSource` property is used to populate the collection of SfCarouselItem which can be either the collection of Image or custom view.
 
@@ -151,4 +151,6 @@ SfCarousel carousel = new SfCarousel(this);
 carousel.SelectedIndex=2;
 
 {% endhighlight %}
+
+ Load images from SD card or internal storage to carousel view sample available in this [link](https://github.com/SyncfusionExamples/how-to-load-image-from-sdcard-or-internal-storage-in-carousel-view-xamarin-android).
 

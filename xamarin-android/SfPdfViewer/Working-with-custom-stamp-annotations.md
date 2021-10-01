@@ -13,10 +13,13 @@ PDF Viewer allows you to include any form of Xamarin.Android View that is Button
 
 ## Add a custom stamp
 
-The custom stamps can be added using any of the following APIs:
+The custom stamps can be added using the `AddAnnotation` or `AddStamp` methods.
 
 {% tabs %}
 {% highlight c# %}
+
+//Add custom stamp/view
+pdfViewer.AddAnnotation(StampAnnotation stampAnnotation)
 
 //Add custom stamp/view to the specified page
 pdfViewer.AddStamp(View view, int pageNumber)
@@ -43,8 +46,12 @@ private void Button_Clicked(object sender, EventArgs e)
     image.WidthRequest = 200;
     image.HeightRequest = 100;
 
-    //Add image as custom stamp to the first page
+    //Method 1: Add image as custom stamp to the first page using `AddStamp` method
     pdfViewer.AddStamp(image, 1);
+	
+	//Method 2: Create a stamp annotation instance and add using `AddAnnotation` method
+	//StampAnnotation stampAnnotation = new StampAnnotation(image, 1, new Rectangle(100, 100, 100, 100));
+	//pdfViewer.AddAnnotation(stampAnnotation);  	
 }
 
 {% endhighlight %}
@@ -99,6 +106,23 @@ pdfViewer.ShapeAnnotationTapped += PdfViewer_ShapeAnnotationTapped;
 {% endhighlight %}
 {% endtabs %}
 
+### Select a custom stamp annotation programmatically
+
+By `SelectAnnotation` method, You can select the custom stamp annotation programmatically. The specified custom stamp annotation object passed as a parameter. 
+
+The following code sample illustrates the same.
+
+{% tabs %}
+{% highlight c# %}
+
+//Selects the specified stamp annotation
+pdfViewer.SelectAnnotation(stampAnnotation);           
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Once `SelectAnnotation` method is called and as long as the annotation stays selected, the `SelectedAnnotation` property will return the same instance as the parameter of this method.
+
 ## Deselect a custom stamp
 
 You can deselect a selected custom stamp annotation by tapping on it or somewhere else on the PDF document. Deselection of a custom stamp annotation can be detected using the `StampAnnotationDeselected` event.
@@ -110,6 +134,23 @@ pdfViewer.StampAnnotationDeselected += PdfViewer_StampAnnotationDeselected;
 
 {% endhighlight %}
 {% endtabs %}
+
+### Deselect a custom stamp annotation programmatically
+
+By `DeselectAnnotation` method , You can deselect the custom stamp annotation programmatically. The specified custom stamp annotation object passed as a parameter.
+
+The following code sample illustrates the same.
+
+{% tabs %}
+{% highlight c# %}
+
+//Deselects the specified stamp annotation
+pdfViewer.DeselectAnnotation(StampAnnotation);       
+
+{% endhighlight %}
+{% endtabs %}
+
+N> There is no effect in Calling `DeselectAnnotation` method, if the given annotation is not selected. Once this method is called, the `SelectedAnnotation` property will return null until any other annotation gets selected.
 
 ## Move or resize a custom stamp
 
@@ -143,6 +184,21 @@ private void PdfViewer_StampAnnotationMovedOrResized(object sender, StampAnnotat
 {% endhighlight %}
 {% endtabs %}
 
+## How to Customize the Minimum size of the Custom Stamp Annotations?
+
+By the `MinimumSize` property, You can set the minimum size to which the custom stamp annotations could be resized.
+
+Refer the following code example:
+
+{% tabs %}
+{% highlight c# %}
+
+//Sets the minimum size for the custom stamp annotations
+pdfViewer.AnnotationSettings.Stamp.MinimumSize = new Size(10, 10);
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Delete a custom stamp
 
 When you select the custom stamp annotation, delete icon will appear on the bottom toolbar. By clicking that delete icon, the selected custom stamp annotation can be removed. The `StampAnnotationRemoved` event will be raised when a custom stamp annotation is removed from the PDF.
@@ -151,6 +207,33 @@ When you select the custom stamp annotation, delete icon will appear on the bott
 {% highlight c# %}
 
 pdfViewer.StampAnnotationRemoved += PdfViewer_StampAnnotationRemoved;
+
+{% endhighlight %}
+{% endtabs %}
+
+## How to enable or disable custom stamp annotation interaction?
+
+The interaction operation can be enabled or disabled for custom stamp annotation alone by setting the `IsLocked` API to `false` or `true` respectively.
+
+For example, the following code disables the interaction operations for all custom stamp annotations in the PDF. But other annotation types can be selected, moved, resized, or removed. 
+
+{% tabs %}
+{% highlight c# %}
+
+//Disable the custom stamp annotation interaction
+pdfViewerControl.AnnotationSettings.Stamp.IsLocked = true;
+
+{% endhighlight %}
+{% endtabs %}
+
+The interaction with custom stamp annotation types will be allowed only if the [`SfPdfViewer.AnnotationSettings.IsLocked`](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.AnnotationSettings.html#Syncfusion_SfPdfViewer_Android_AnnotationSettings_IsLocked) API is set to `false`. The following code does not allow the interactions with custom stamp annotations, although the `IsLocked` property of the custom stamp annotation is set to `false`. 
+
+{% tabs %}
+{% highlight c# %}
+
+//Disables the custom stamp annotation interaction, though its 'IsLocked' property is set to ‘false’ 
+pdfViewerControl.AnnotationSettings.IsLocked = true;
+pdfViewerControl.AnnotationSettings.Stamp.IsLocked = false;
 
 {% endhighlight %}
 {% endtabs %}
@@ -175,11 +258,11 @@ private void PdfViewerControl_StampAnnotationSelected(object sender, StampAnnota
 {% endhighlight %}
 {% endtabs %}
 
-## How to get and set the name of the annotations?
+## How to get and set the name of the custom stamp annotations?
 
-The PDF Viewer allows the users to get and set the name of annotations through the [Name](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.IAnnotation.html#Syncfusion_SfPdfViewer_Android_IAnnotation_Name) API.
+The PDF Viewer allows the users to get and set the name of custom stamp annotations through the [Name](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.IAnnotation.html#Syncfusion_SfPdfViewer_Android_IAnnotation_Name) API.
 
-The following code sample explains modifying the name of the annotation in the [StampAnnotationAdded](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.SfPdfViewer.html#Syncfusion_SfPdfViewer_Android_SfPdfViewer_StampAnnotationAdded) event. 
+The following code sample explains modifying the name of the custom stamp annotation in the [StampAnnotationAdded](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.SfPdfViewer.html#Syncfusion_SfPdfViewer_Android_SfPdfViewer_StampAnnotationAdded) event. 
 
 {% tabs %}
 {% highlight c# %}
@@ -192,5 +275,4 @@ The following code sample explains modifying the name of the annotation in the [
 {% endhighlight %}
 {% endtabs %}
 
-N>For illustration purposes, we have only provided the sample for modifying the name of the annotation in the [StampAnnotationAdded](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.SfPdfViewer.html#Syncfusion_SfPdfViewer_Android_SfPdfViewer_StampAnnotationAdded) event. But this can be done in all other events as well.
-
+N>For illustration purposes, we have only provided the sample for modifying the name of the custom stamp annotation in the [StampAnnotationAdded](https://help.syncfusion.com/cr/xamarin-android/Syncfusion.SfPdfViewer.Android.SfPdfViewer.html#Syncfusion_SfPdfViewer_Android_SfPdfViewer_StampAnnotationAdded) event. But this can be done in all other events as well.
